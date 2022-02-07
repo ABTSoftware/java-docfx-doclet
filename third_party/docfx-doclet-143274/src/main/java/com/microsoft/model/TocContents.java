@@ -37,8 +37,8 @@ public class TocContents {
     private void createTocContents(String projectName, List<TocItem> items) {
         List<Object> tocItems = new ArrayList<>();
         // combine guides and tocItems
-        tocItems.add(new Guide("Overview", "overview.html"));
-        tocItems.add(new Guide("Version history", "history.md"));
+        tocItems.add(new Guide("Overview", "overview.yml"));
+        // tocItems.add(new Guide("Version history", "history.md"));
         tocItems.addAll(items);
         // wrap guides + tocItems with product hierarchy
         contents.add(new ProjectContents(projectName, tocItems));
