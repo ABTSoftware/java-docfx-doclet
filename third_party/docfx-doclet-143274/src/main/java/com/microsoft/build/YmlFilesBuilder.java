@@ -105,7 +105,7 @@ public class YmlFilesBuilder {
         return tocTypeMap.getTitleList().stream()
                 .filter(kindTitle -> tocTypeMap.get(kindTitle.getElementKind()).size() > 0)
                 .flatMap(kindTitle -> {
-                    tocTypeMap.get(kindTitle.getElementKind()).add(0, new TocItem(kindTitle.getTitle()));
+                    // tocTypeMap.get(kindTitle.getElementKind()).add(0, new TocItem(kindTitle.getTitle()));
                     return tocTypeMap.get(kindTitle.getElementKind()).stream();
                 }).collect(Collectors.toList());
     }
